@@ -1,0 +1,24 @@
+@(contacts : List[Contact])
+
+@main("List Contacts") {
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Phone</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for(contact <- contacts) {
+                <tr>
+                    <td>@contact.name</td>
+                    <td>@contact.email</td>
+                    <td>@contact.phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<a href="@routes.Agenda.newContact()">Create new one</a>

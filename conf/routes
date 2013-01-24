@@ -7,7 +7,7 @@ GET     /                           controllers.Application.index()
 
 GET     /contacts                    controllers.Agenda.list()
 
-GET     /contacts/:id                 controllers.Agenda.show(id)
+GET     /contacts/:id                 controllers.Agenda.show(id : Long)
 
 GET     /contact/new                   controllers.Agenda.newContact()
 POST    /contact/create                controllers.Agenda.createContact()
