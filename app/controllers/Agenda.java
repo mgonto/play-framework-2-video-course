@@ -30,9 +30,13 @@ public class Agenda extends Controller {
     
     public static Result createContact() {
         Form<Contact> contactForm = form(Contact.class).bindFromRequest();
-        Contact contact = contactForm.get();
-        contact.save();
-        return redirect(routes.Agenda.list());
+        if (contactForm.hasErrors()) {
+            return badRequest(views.html.newContact.render(contactForm));
+        } else {
+            Contact contact = contactForm.get();
+            contact.save();
+            return redirect(routes.Agenda.list());
+        }
     }
 
 }
