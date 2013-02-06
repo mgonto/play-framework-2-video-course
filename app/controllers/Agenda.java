@@ -2,12 +2,16 @@ package controllers;
 
 import java.util.List;
 
+import controllers.auth.AgendaAuthenticator;
+
 import models.Contact;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security.Authenticated;
 
 @LogRequest
+@Authenticated(AgendaAuthenticator.class)
 public class Agenda extends Controller {
     
     public static Result list() {
