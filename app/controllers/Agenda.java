@@ -7,6 +7,7 @@ import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+@LogRequest
 public class Agenda extends Controller {
     
     public static Result list() {
