@@ -11,6 +11,7 @@ GET     /contacts/:id                 controllers.Agenda.show(id : Long)
 
 GET     /contact/new                   controllers.Agenda.newContact()
 POST    /contact/create                controllers.Agenda.createContact()
+POST    /contact/createJson            controllers.Agenda.createContactJson()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
