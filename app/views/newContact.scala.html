@@ -1,11 +1,13 @@
 @(contactForm : Form[Contact])
 @import helper._
 
+@implicitField = @{ FieldConstructor(views.html.bootstrapInput.f) }
+
 @main("New contact") {
     @form(routes.Agenda.createContact()) {
         @inputText(contactForm("name"))
         @inputText(contactForm("email"))
         @inputText(contactForm("phone"))
-        <input type="submit" value="Submit" />
+        <input type="submit" class="btn btn-primary" value="Submit" />
     }
 }
