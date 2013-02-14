@@ -10,8 +10,9 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security.Authenticated;
 
-@LogRequest
+//@LogRequest
 //@Authenticated(AgendaAuthenticator.class)
+@LogRequest
 public class Agenda extends Controller {
     
     public static Result list() {
