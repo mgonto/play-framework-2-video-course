@@ -1,6 +1,6 @@
 import sbt._
 import Keys._
-import PlayProject._
+import play.Project._
 
 object ApplicationBuild extends Build {
 
@@ -8,11 +8,13 @@ object ApplicationBuild extends Build {
     val appVersion      = "1.0-SNAPSHOT"
 
     val appDependencies = Seq(
-        "postgresql" % "postgresql" % "9.1-901-1.jdbc4",
-        "logger-mod" % "logger-mod_2.9.1" % "1.0-SNAPSHOT"
+        javaCore,
+        javaJdbc,
+        javaEbean,
+        "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
     )
 
-    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+    val main = play.Project(appName, appVersion, appDependencies).settings(
       // Add your own project settings here      
     )
 
