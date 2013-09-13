@@ -7,6 +7,7 @@ import org.codehaus.jackson.node.ObjectNode;
 
 import models.Contact;
 import play.data.Form;
+import static play.data.Form.form;
 import play.mvc.BodyParser;
 import play.mvc.BodyParser.Json;
 import play.mvc.Controller;
