@@ -7,13 +7,13 @@ import org.codehaus.jackson.node.ObjectNode;
 
 import models.Contact;
 import play.data.Form;
+import static play.data.Form.form;
 import play.mvc.BodyParser;
 import play.mvc.BodyParser.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
 //@Authenticated(AgendaAuthenticator.class)
-@LogRequest
 public class Agenda extends Controller {
     
     public static Result list() {
